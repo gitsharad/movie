@@ -1,0 +1,22 @@
+<div class="errormsg" *ngIf="errorMessage">{{errorMessage}}</div>
+<h3 *ngIf="movies.length=== 0">Opps No Movies Found! Try Another One...</h3>
+<div class="latestfour" *ngIf="movies.length!==0">
+    <h1 class="latestmovies">Searched Movies</h1>
+    <div class="row">
+        <div class="col" *ngFor="let movie of movies">
+          <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{movie.title}}</mat-card-title>
+            <mat-card-subtitle>{{movie.year}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src={{movie.info.image_url}}  class='searchimg' routerLink="/details/{{movie.title}}" alt={{movie.title}}>
+          
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+.movie-spacer {
+    flex: 1 1 auto;
+  }
+
+  .movie-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align:center;
+  }
+  
+  .movie-full-width {
+    width: 100%;
+  }
+
+  .searchbox, .searchcontent{
+    margin: 10px;
+  }
+  
+  .container{margin: 0 auto;}
+
+  .header mat-toolbar, movie{
+    cursor: pointer;
+  }

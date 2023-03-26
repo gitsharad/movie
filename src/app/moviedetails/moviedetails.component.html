@@ -1,0 +1,99 @@
+<div class="errormsg" *ngIf="errorMessage">{{errorMessage}}</div>
+<div class="container" *ngIf="movie">
+   <div class="row">
+      <div class='col'>
+         <img src={{movie.info.image_url}} alt="" >
+      </div>
+      <div class="col2">
+      <table class="movieinfotbl">
+         <tr>
+            <th>
+               Title
+            </th>
+            <td>
+             {{movie.title}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Year
+            </th>
+            <td>
+               {{movie.year}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Directors
+            </th>
+            <td>
+               <span *ngFor="let director of movie.info.directors">{{director}}</span>
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Release Date
+            </th>
+            <td>
+               <span>{{movie.info.release_date | date:'medium'}}</span>
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Rating
+            </th>
+            <td>
+               {{movie.info.rating}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Genres
+            </th>
+            <td>
+               {{movie.info.genres}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Actors
+            </th>
+            <td>
+               <span *ngFor="let actor of movie.info.actors">{{actor}}</span>
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Rank
+            </th>
+            <td>
+               {{movie.info.rank}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Running Time
+            </th>
+            <td>
+               {{movie.info.running_time_secs}}
+            </td>
+         </tr>
+         <tr>
+            <th>
+               Plot
+            </th>
+            <td>
+               {{movie.info.plot}}
+            </td>
+         </tr>
+
+
+         
+
+         
+      </table>
+      </div>
+   </div>
+
+
+</div>
