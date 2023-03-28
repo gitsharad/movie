@@ -9,7 +9,7 @@
             <mat-card-title>{{movie.title}}</mat-card-title>
             <mat-card-subtitle>{{movie.year}}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src={{movie.info.image_url}}  class='searchimg' routerLink="/details/{{movie.title}}" alt={{movie.title}}>
+          <img mat-card-image src={{movie.info.image_url}} onerror="this.src='assets/img/No-Image-Placeholder.png'" class='searchimg' routerLink="/details/{{movie.title}}" alt={{movie.title}}>
           
           <mat-card-actions>
             <button mat-button>LIKE</button>

@@ -12,7 +12,6 @@ import { MovieAttribute } from "../movie.service";
 export class SearchComponent {
   movies: MovieAttribute[] = []
   title:string = ''
-  noimageurl: string = 'assets/img/No-Image-Placeholder.png'
   errorMessage:string = ''
   getmovie_subscribe!:Subscription
   constructor(private _movieService: MovieService, 

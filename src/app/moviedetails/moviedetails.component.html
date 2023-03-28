@@ -2,7 +2,7 @@
 <div class="container" *ngIf="movie">
    <div class="row">
       <div class='col'>
-         <img src={{movie.info.image_url}} alt="" >
+         <img src={{movie.info.image_url}} onerror="this.src='assets/img/No-Image-Placeholder.png'"  alt="" >
       </div>
       <div class="col2">
       <table class="movieinfotbl">

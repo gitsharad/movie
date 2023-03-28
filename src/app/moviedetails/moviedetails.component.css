@@ -9,4 +9,7 @@
 .col2{
     max-width: 400px;
 }
+.col img {
+  max-width: 400px;
+}
 .movieinfotbl tr:nth-child(odd){background: #CCC}
