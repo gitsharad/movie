@@ -22,7 +22,7 @@ ngOnInit():void{
     this._movieService.getMovieData(this.title).subscribe((moviedata)=>{
       this.movies = moviedata;
     },(err)=>{
-        this.errorMessage = err.message;
+        this.errorMessage = err;
     }) 
     setTimeout(()=>{this._movieService.ishomepage.next(false);},0)
    

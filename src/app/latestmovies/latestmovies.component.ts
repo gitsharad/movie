@@ -15,7 +15,7 @@ ngOnInit():void{
   this._movieService.getMovieDesc().subscribe((moviedata)=>{
     this.movies = moviedata;
   },(err)=>{
-    this.errorMessage = err.message;
+    this.errorMessage = err;
 }) 
 }
 }

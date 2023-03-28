@@ -29,13 +29,13 @@ export class MovieService {
   constructor(private _httpClient: HttpClient) { }
   
   getMovieData(searchinput:string):Observable<MovieAttribute[]>{
-    return this._httpClient.get<MovieAttribute[]>('assets/moviedata.json').pipe(map(data => 
+    return this._httpClient.get<MovieAttribute[]>('assets/moviedata.json').pipe(retry(1), catchError(this.handleError),map(data => 
       data.filter(option => option.title.toLowerCase().includes(searchinput))))
   }
 
   getMovieDetails(title:string):Observable<MovieAttribute[]>{
-    return this._httpClient.get<MovieAttribute[]>('assets/moviedata.json').pipe(map(data => 
-      data.filter(option => option.title.toLowerCase() == title.toLowerCase())))
+    return this._httpClient.get<MovieAttribute[]>('assets/moviedata.json').pipe(retry(1), catchError(this.handleError),
+       map(data =>data.filter(option => option.title.toLowerCase() == title.toLowerCase())))
   }
 
   getMovieDesc():Observable<MovieAttribute[]>{

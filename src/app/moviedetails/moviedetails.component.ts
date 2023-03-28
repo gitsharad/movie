@@ -19,7 +19,7 @@ export class MoviedetailsComponent {
         this._movieService.getMovieDetails(this.title).subscribe((moviedata)=>{
           this.movie = moviedata[0];
         },(err)=>{
-          this.errorMessage = err.message;
+          this.errorMessage = err;
       }) 
       }
     })
